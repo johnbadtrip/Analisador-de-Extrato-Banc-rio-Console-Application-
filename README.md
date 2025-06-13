@@ -1,26 +1,41 @@
-# Analisador de Extrato Bancário
+Analisador de Extrato Bancário
+📄 Sobre o Projeto
 
-## Sobre o Projeto
+Este projeto é uma aplicação de console desenvolvida em Java puro que lê um arquivo de extrato bancário (em formato .csv) e realiza uma análise, calculando o total de depósitos, retiradas e o balanço final.
 
-Esta é uma aplicação de console desenvolvida em Java puro, sem frameworks. Ela lê um arquivo de extrato bancário em formato CSV, processa as transações e gera um relatório agregado no console, mostrando o saldo total, as despesas por categoria e as maiores transações do período.
+O objetivo principal foi praticar e demonstrar conhecimentos sólidos em Java Core, incluindo manipulação de arquivos (IO), tratamento de exceções, uso de coleções (Lists) e programação orientada a objetos.
+🛠️ Tecnologias Utilizadas
 
-O foco aqui foi aplicar os conceitos fundamentais de Java, como Programação Orientada a Objetos, manipulação de arquivos (IO), tratamento de exceções e uso avançado de `Collections` e `Streams`.
+    Java 17
+    JUnit 5 (Opcional, se você adicionar testes): Para garantir a qualidade e o funcionamento correto das lógicas de negócio.
 
+✨ Funcionalidades
 
-## Funcionalidades
+    Leitura de transações a partir de um arquivo extrato.csv.
+    Cálculo do valor total de todas as transações.
+    Cálculo do total de depósitos (transações positivas).
+    Cálculo do total de retiradas (transações negativas).
+    Exibição de um relatório final no console.
 
-* **Leitura de CSV:** O programa lê um arquivo `.csv` com colunas (Data, Descrição, Valor).
-* **Processamento de Transações:** Cada linha do CSV é convertida em um objeto `Transacao`.
-* **Relatório Agregado:**
-    * Calcula o saldo final (soma de todas as transações).
-    * Agrupa despesas por palavras-chave na descrição (ex: "iFood", "Uber", "Mercado").
-    * Exibe as 5 maiores despesas e as 5 maiores receitas.
+⚙️ Como Executar
 
-## Tecnologias Utilizadas
+    Clone o repositório:
+    git clone https://github.com/johnbadtrip/AnalisadorExtratoBancario.git
 
-* **Java 17 (Core):** Utilização pura da linguagem, focando em:
-    * **POO:** Classes como `Transacao`, `Analisador` e `Relatorio`.
-    * **Java IO:** Para leitura do arquivo `.csv`.
-    * **Java Collections Framework:** Uso intensivo de `List` para armazenar as transações.
-    * **Java Streams API:** Para processar e agregar os dados de forma funcional e eficiente.
-* **JUnit 5:** Para testes unitários das lógicas de cálculo e processamento.
+    Navegue até o diretório do projeto:
+    cd AnalisadorExtratoBancario
+
+    Compile os arquivos Java:
+    javac -d ./bin ./src/*.java
+
+    Execute a aplicação:
+    java -cp ./bin NomeDaClassePrincipal
+    Obs: Substitua NomeDaClassePrincipal pelo nome da classe que contém o método main.
+
+🎓 O que aprendi
+
+    Manipulação de arquivos em Java utilizando a API de IO.
+    Parseamento de dados de arquivos CSV.
+    Utilização eficiente de coleções para armazenar e processar dados.
+    Design de classes e objetos para modelar um problema real de forma coesa.
+    Prática de tratamento de exceções para tornar a aplicação mais robusta.
